@@ -20,6 +20,8 @@ jobs:
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
       run: composer create-project --prefer-dist laravel/laravel laravel6-on-google-cloud-run
+    - name: Discover
+      run: php artisan package:discover --ansi
     - name: Generate key
       run: php artisan key:generate --ansi
     - name: Directory Permissions
