@@ -22,7 +22,6 @@ jobs:
       run: composer create-project --prefer-dist laravel/laravel laravel6-on-google-cloud-run
     - name: Prepare Laravel Application
       run: |
-        cp .env.example .env
         php artisan key:generate
         php artisan migrate
     - name: Directory Permissions
