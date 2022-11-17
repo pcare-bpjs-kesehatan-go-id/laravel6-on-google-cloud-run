@@ -19,16 +19,7 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
-      run: composer create-project --prefer-dist laravel/laravel laravel6-on-google-cloud-run
-    - name: Prepare All Information
-      run: |
-        Name: Yusi Rahmawati
-        Date: 14 Juli 2004
-        School Information
-        SDN 1 Muara Cijung Barat
-        SMPN 4 Rangkasbitung
-        SMKN 2 Rangkasbitung
-        
+      run: composer create-project --prefer-dist laravel/laravel laravel6-on-google-cloud-run        
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
     - name: Create Database
